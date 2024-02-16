@@ -1,4 +1,6 @@
 from datetime import datetime
+from pprint import pprint
+
 from config import FILE
 import json
 
@@ -43,3 +45,8 @@ class SortedVacancies:
             })
 
         return self.head_hunter_sorted
+
+
+if __name__ == '__main__':
+    r = SortedVacancies()
+    pprint(r.sorted_vacancies_hh)
