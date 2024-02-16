@@ -6,6 +6,9 @@ from src.vacancies import Vacancy
 
 
 class HeadHunter(Vacancy, APIVacancies):
+    """
+    Класс для коннекта пользователя с сайтом Head Hunter
+    """
     def __init__(self, name, top_n):
         super().__init__(name, top_n)
         self.top_n = top_n
