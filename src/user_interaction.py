@@ -29,6 +29,11 @@ class UserInteractionJson(DebugUserJson):
     """
 
     def json_user_search(self):
+        """
+        Взаимодействие с пользователем
+        :return: Готовый результат парсинга в читабельном виде
+        :rtype: str
+        """
         vacancies_list = []
         json_file = SortedVacancies()
         json_vacancies = json_file.sorted_vacancies_hh
