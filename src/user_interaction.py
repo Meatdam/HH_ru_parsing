@@ -1,5 +1,3 @@
-from pprint import pprint
-
 from src.debug_user_json import DebugUserJson
 from src.conection_head_hunter import HeadHunter
 from src.hh_request_debug import HHRequestDebug
@@ -51,3 +49,8 @@ class UserInteractionJson(DebugUserJson):
                   f"Ответственность: {result['responsibility']}\nЗарплата от {result['salary_from']}\n")
         if len(vacancies_list) == 0:
             print(f'Резельтатов 0')
+
+
+if __name__ == '__main__':
+    r = UserInteractionJson()
+    r.json_user_search()
