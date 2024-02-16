@@ -23,4 +23,4 @@ class DebugUserJson(UserForm):
 
 if __name__ == '__main__':
     r = DebugUserJson()
-    print(r.user_input_value_str())
+    print(r.user_input_int())
