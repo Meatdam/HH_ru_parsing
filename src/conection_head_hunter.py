@@ -9,6 +9,7 @@ class HeadHunter(Vacancy, APIVacancies):
     """
     Класс для коннекта пользователя с сайтом Head Hunter
     """
+
     def __init__(self, name, top_n):
         super().__init__(name, top_n)
         self.top_n = top_n
@@ -24,13 +25,17 @@ class HeadHunter(Vacancy, APIVacancies):
     def get_vacancies(self):
         """Выгрузка данных по 'HeadHunter' по запросам пользователя и
         возвращается словарь"""
-        data = requests.get(f"{self.url}/vacancies",
-                            params={'text': self.name,
-                                    'area': 113,
-                                    'enable_snippets': "true",
-                                    'only_with_salary': "true",
-                                    'per_page': self.top_n}).json()
-        return data
+        try:
+            data = requests.get(f"{self.url}/vacancies",
+                                params={'text': self.name,
+                                        'area': 113,
+                                        'enable_snippets': "true",
+                                        'only_with_salary': "true",
+                                        'per_page': self.top_n}).json()
+            return data
+        except requests.exceptions.HTTPError as errh:
+            print("HTTP Error")
+            print(errh.args[0])
 
     def to_json(self):
         """Создает json файл с данными о канале"""
