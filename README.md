@@ -17,6 +17,26 @@ _______
 Проект был сделан на виртуальном окружение «Venv».
 В проекте имеется файл «requirements.txt» со всеми зависимостями.
 
-Автор проекта:
+Для запуска проекта у себя локально необходимо сделать следующее: 
+```
+git clone git@github.com:Meatdam/bank_operations.git
+```
+Установить виртуальное окружение `venv`
+```
+python3 -m venv venv для MacOS и Linux систем
+python -m venv venv для windows
+```
+Активировать виртуальное окружение
+```
+source venv/bin/activate для MasOs и Linux систем
+venv\Scripts\activate.bat для windows
+```
+И установить файл с зависимостями
+```
+pip install -r requirements.txt
+```
+
+Автор проекта:<br>
 [Кузькин Илья](https://github.com/Meatdam)
+
 
