@@ -19,7 +19,7 @@ _______
 
 Для запуска проекта у себя локально необходимо сделать следующее: 
 ```
-git clone git@github.com:Meatdam/bank_operations.git
+git@github.com:Meatdam/HH_ru_parsing.git
 ```
 Установить виртуальное окружение `venv`
 ```
